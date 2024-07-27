@@ -16,6 +16,12 @@ use Illuminate\Http\Request;
 
 ### 変数宣言
 
+- 変数名はキャメルケース
+
+```php=
+$userData
+```
+
 - イコールにはスペースを入れる
 
 ```php=
@@ -113,7 +119,7 @@ public function sample(?int $id, string $name): ?string
     - `例: SampleController`
   - バリデーション処理は書かないこと->Requestにバリデーションは記載
   - `php artisan make:controller UserController`コマンドで作成  
-  -> invokableやresourceようなオプションは必要時には追記で作成(https://readouble.com/laravel/10.x/ja/controllers.html)
+  -> invokableやresourceようなオプションは必要時には追記で作成(<https://readouble.com/laravel/10.x/ja/controllers.html>)
 
 - Model
   - 基本的には以下の責務以外は書かない
@@ -122,11 +128,11 @@ public function sample(?int $id, string $name): ?string
     - DB操作（Eloquent）
   - ビジネスロジックは UseCasesディレクトリだけ切って，ドメインごとに単一責務なクラスを置く
   - `php artisan make:model Flight`コマンドで作成  
-  -> mfscなどのオプションは必要時には追記で作成(https://readouble.com/laravel/11.x/ja/eloquent.html)
+  -> mfscなどのオプションは必要時には追記で作成(<https://readouble.com/laravel/11.x/ja/eloquent.html>)
 
 - Request
   - バリデーション処理はRequestに書くこと
-  - `php artisan make:request StorePostRequest`コマンドで作成(https://readouble.com/laravel/10.x/ja/validation.html#:~:text=%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%E3%83%90%E3%83%AA%E3%83%87%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3-,%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%E4%BD%9C%E6%88%90,-%E3%82%88%E3%82%8A%E8%A4%87%E9%9B%91%E3%81%AA)
+  - `php artisan make:request StorePostRequest`コマンドで作成(<https://readouble.com/laravel/10.x/ja/validation.html#:~:text=%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%E3%83%90%E3%83%AA%E3%83%87%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3-,%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%E4%BD%9C%E6%88%90,-%E3%82%88%E3%82%8A%E8%A4%87%E9%9B%91%E3%81%AA>)
 
   ```php=
     public function rules()
@@ -141,7 +147,7 @@ public function sample(?int $id, string $name): ?string
 
 - Resource
   - responseに関してはResourceで整理する
-  - `php artisan make:resource UserResource`コマンドで作成(https://readouble.com/laravel/10.x/ja/eloquent-resources.html)
+  - `php artisan make:resource UserResource`コマンドで作成(<https://readouble.com/laravel/10.x/ja/eloquent-resources.html>)
 
   ```php=
   class UserResource extends JsonResource
