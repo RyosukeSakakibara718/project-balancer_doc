@@ -1,3 +1,8 @@
+# メンバー画面
+## シナリオ
+1. 画面表示時
+2. 検索時
+##　シーケンス図
 ```mermaid
 sequenceDiagram
     participant User as ユーザー
